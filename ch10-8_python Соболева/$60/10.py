@@ -1,10 +1,10 @@
 # -*- coding: cp1251 -*-
 
-'''
+"""
     Напишите программу, которая вводит натуральное число N и находит все числа в интервале 
     [0,N], сумма цифр которых не меняется при умножении на 2, 3, 4, 5, 6, 7, 8 и 9 (например, число 9).
     Используйте функцию для вычисления суммы цифр числа.
-'''
+"""
 
 # суммирует цифры числа
 def sum_of_digits(a):
@@ -14,14 +14,16 @@ def sum_of_digits(a):
         a = a // 10
     return s
 
-N = int(input("введите числа --> "));
+
+N = int(input("введите числа --> "))
 
 for n1 in range(0, N + 1):
-    n1sum = sum_of_digits(n1);
+    n1sum = sum_of_digits(n1)
     for n2 in range(2, 11):
-        if (n2 == 10):
-            print(n1);
-            break;
+        if n2 == 10:
+            print(n1)
+            break
 
-        n2sum = sum_of_digits(n1*n2);
-        if(n1sum != n2sum): break;
+        n2sum = sum_of_digits(n1 * n2)
+        if n1sum != n2sum:
+            break

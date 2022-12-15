@@ -1,11 +1,12 @@
 # -*- coding: cp1251 -*-
 
-'''
+"""
     Напишите функцию, которая вычисляет количество цифр числа
-'''
+"""
 
 # функция считает кол-во цифр в числе
 def length(number):
-    return len(str(number));
+    return len(str(number))
 
-print(length(552414234197));
+
+print(length(552414234197))

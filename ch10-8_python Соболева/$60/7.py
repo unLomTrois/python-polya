@@ -1,18 +1,19 @@
 # -*- coding: cp1251 -*-
 
-'''
+"""
     Напишите функцию, которая вычисляет факториал натурального числа N
-'''
+"""
 
-import random;
+import random
 
 # вычисление факториала числа
 def fact(number):
-    res, i = 1, 1;
+    res, i = 1, 1
     while i <= number:
-        res *= i;
-        i+=1;
+        res *= i
+        i += 1
 
-    return res;
+    return res
 
-print(fact(7));
+
+print(fact(7))

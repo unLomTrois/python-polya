@@ -1,20 +1,21 @@
 # -*- coding: cp1251 -*-
 
-'''
+"""
     Напишите логическую функцию, которая определяет, верно ли, что число N – совершенное, 
     то есть равно сумме своих делителей, меньших его самого
-'''
+"""
 
 # Проверяет числа на его совершенность
 def isPerfect(number):
-    _sum, i = 0, 1;
+    _sum, i = 0, 1
     while i <= number // 2:
         if number % i == 0:
-            _sum += i;
-        i += 1;
+            _sum += i
+        i += 1
 
-    return number == _sum;
+    return number == _sum
 
-N = int(input("введите число --> "));
 
-print(isPerfect(N));
+N = int(input("введите число --> "))
+
+print(isPerfect(N))
