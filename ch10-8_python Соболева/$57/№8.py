@@ -53,7 +53,7 @@ else:
         word += " "
 
     # единицы
-    if num % 10 != 0:
+    if (num < 10 or num > 20)  and num % 10 != 0:
         if num % 10 == 1:
             word += "один"
         if num % 10 == 2:

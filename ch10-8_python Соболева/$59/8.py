@@ -5,11 +5,10 @@
 """
 
 
-def show_square(number):
-    i = 0
-    while i < number:
-        print("*" * number)
-        i += 1
+def show_square(num):
+    for i in range(num):
+        print("* " * num)
+
 
 n = int(input("введите число: "))
 

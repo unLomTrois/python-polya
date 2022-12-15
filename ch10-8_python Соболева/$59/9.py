@@ -6,24 +6,30 @@
 
 
 def show_age(age):
-    if 1 <= age <= 120:
-        print(age, end=" ")
-
-        if (
-            age == 11
-            or age == 12
-            or age == 13
-            or age == 14
-            or age % 10 == 0
-            or age % 10 > 4
-        ):
-            print("Лет")
-        elif age % 10 == 1:
-            print("Год")
-        else:
-            print("Года")
+    word = ""
+    if age > 120:
+        print("слишком много лет")
     else:
-        print("Ахтунг! Ты слишком стар для этой фигни...")
+        if age == 1:
+            # если 1 год
+            word = "год"
+        elif age >= 2 and age < 5:
+            # если 2, 3, 4 года
+            word = "года"
+        elif age >= 5 and age <= 20:
+            # если 5, 6, 7, 8, 9, 10, и -надцать лет
+            word = "лет"
+        elif age < 100 and age % 10 == 1:
+            # если число кончается на единицу
+            word = "год"
+        elif age < 100 and age % 10 >= 2 and age % 10 <= 4:
+            # если число кончается на 2, 3, 4 года
+            word = "года"
+        else:
+            # во всех других случаях - лет
+            word = "лет"
+
+    print(age, word)
 
 
 n = int(input("введите число: "))
