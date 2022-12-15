@@ -7,9 +7,9 @@
 import random
 
 
-N = int(input("введите число: "))
+num = int(input("введите число: "))
 
-A = [x for x in range(1, N + 1)]
-random.shuffle(A)
+arr = [n for n in range(1, num + 1)]
+random.shuffle(arr)
 
-print(A)
+print(arr)
