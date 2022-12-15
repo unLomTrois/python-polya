@@ -11,11 +11,11 @@
 num = int(input("введите число: "))
 
 sum = 0
-for divisor in range(1, num // 2 + 1):
+for delitel in range(1, num // 2 + 1):
     # находим все делители
-    if num % divisor == 0:
+    if num % delitel == 0:
         # добавляем делитель к сумме
-        sum += divisor
+        sum += delitel
 
 if num == sum:
     print("число совершенное")

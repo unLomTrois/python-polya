@@ -6,22 +6,21 @@
 вычисляет сумму делителей числа.
 """
 
-import random
 
-# суммирует делители числа
-def sum_of_divs(number):
-    res, i = 0, 1
-    while i <= number // 2:
-        if number % i == 0:
-            res += i
-        i += 1
+def deliteli(num):
+    sum = 0
+    for delitel in range(1, num // 2 + 1):
+        # находим все делители
+        if num % delitel == 0:
+            # добавляем делитель к сумме
+            sum += delitel
 
-    return res
+    return sum
 
 
-for n1 in range(1, 10000 + 1):
-    n1sum = sum_of_divs(n1)
-    for n2 in range(n1 + 1, 10000 + 1):
-        n2sum = sum_of_divs(n2)
-        if n1sum == n2 and n2sum == n1:
-            print(n1, n2)
+for a in range(1, 10000 + 1):
+    a_sum = deliteli(a)
+    for b in range(a + 1, 10000 + 1):
+        b_sum = deliteli(b)
+        if a_sum == b and b_sum == a:
+            print(a, b)
