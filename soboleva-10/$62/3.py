@@ -4,18 +4,17 @@
 """
 
 
-N = int(input("введите число --> "))
+n = int(input("введите число: "))
 
-A = []
+arr = []
 
-cur, fut = 0, 1
-# текущий, следующий
-for i in range(N):
-    a = cur
-    cur = fut
+f1 = 0
+f2 = 1
+f_n = f1
+for i in range(0, n):
+    f_n = f1
+    f1 = f2
+    arr.append(f1)
+    f2 = f_n + f2
 
-    A.append(cur)
-
-    fut = a + fut
-
-print(A)
+print(arr)
