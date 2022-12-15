@@ -11,5 +11,6 @@ def with_the_last(number):
         print(number % (i * 10) // i)
         i *= 10
 
+n = int(input("введите число:"))
 
-with_the_last(int(input("Введите число:")))
+with_the_last(n)

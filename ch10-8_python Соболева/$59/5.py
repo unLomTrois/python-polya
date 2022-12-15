@@ -9,4 +9,4 @@ def sys_8(number):
     print("{:010o}".format(number))
 
 
-sys_8(int(input("Введите число:")))
+sys_8(int(input("введите число:")))

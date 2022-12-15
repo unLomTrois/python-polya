@@ -14,4 +14,7 @@ def delitel(number):
     print()
 
 
-delitel(int(input("Введите число:")))
+n = int(input("введите число:"))
+
+
+delitel(n)
