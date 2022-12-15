@@ -4,11 +4,11 @@
 """
 
 
-def fibonacci(num):
+def fibonacci(n):
     f1 = 0
     f2 = 1
     f_n = f1
-    for i in range(0, num):
+    for i in range(0, n):
         f_n = f1
         f1 = f2
         f2 = f_n + f2
