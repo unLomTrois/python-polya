@@ -1,4 +1,3 @@
-# -*- coding: cp1251 -*-
 
 def priority(op):
 	if op in "+-": return 10

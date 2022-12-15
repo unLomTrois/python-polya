@@ -1,4 +1,3 @@
-# -*- coding: cp1251 -*-
 
 a = int(input("print number (a): "));
 

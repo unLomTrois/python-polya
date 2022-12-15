@@ -1,4 +1,3 @@
-# -*- coding: cp1251 -*-
 
 class TLogElement:
     def __init__(self):

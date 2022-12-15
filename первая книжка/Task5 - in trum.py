@@ -1,4 +1,3 @@
-# -*- coding: cp1251 -*-
 
 money = float(input("Денег в год: "));
 years = int(input("Кол-во лет: "));

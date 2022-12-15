@@ -1,4 +1,3 @@
-# -*- coding: cp1251 -*-
 
 class TPen:
     def __init__(self):

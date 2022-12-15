@@ -1,9 +1,8 @@
-# -*- coding: cp1251 -*-
 
 from simpletk import *
 from int_edit import TIntEdit
 
-app = TApplication('Шестнадцатиричная система')
+app = TApplication('пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ')
 app.size = (250, 36)
 app.position = (200, 200)
 

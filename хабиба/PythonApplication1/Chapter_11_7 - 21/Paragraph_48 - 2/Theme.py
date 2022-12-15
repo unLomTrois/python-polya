@@ -1,4 +1,3 @@
-# -*- coding: cp1251 -*-
 
 class TRoad:
     def __init__(self):

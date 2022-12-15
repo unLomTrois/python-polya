@@ -1,4 +1,3 @@
-# -*- coding: cp1251 -*-
 
 from abc import ABCMeta, abstractmethod
 

@@ -1,4 +1,3 @@
-# -*- coding: cp1251 -*-
 
 from datetime import date
 
