@@ -3,11 +3,14 @@
 Напишите рекурсивную процедуру для перевода числа из двоичной системы счисления в десятичную.
 """
 
-def toDec(num, res=-1):
+
+def dec(num, res=-1):
     if num == 0:
         return 0
     res += 1
-    return (num % 10) * (1 << res) + toDec(num // 10, res)
+    return (num % 10) * (1 << res) + dec(num // 10, res)
 
 
-print(toDec(1000))
+n = int(input("введите число: "))
+
+print(dec(n))
