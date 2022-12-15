@@ -1,14 +1,13 @@
-
-'''
+"""
     *��������� ������ �� N ��������� ���������� ������ ������� � ��������� 1..N ���, ����� � ������ ����������� ����� ��� ����� �� 1 �� N (��������� ��������� ������������).
-'''
+"""
 
-import random;
+import random
 
 
-N = int(input("������� ����� --> "));
+N = int(input("������� ����� --> "))
 
-A = [x for x in range(1, N+1)];
-random.shuffle(A);
+A = [x for x in range(1, N + 1)]
+random.shuffle(A)
 
-print(A);
+print(A)

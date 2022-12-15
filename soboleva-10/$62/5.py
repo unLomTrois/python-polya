@@ -1,19 +1,19 @@
-
-'''
+"""
     ��������� ��������� ������������ ����� �� 1 �� N ���, ����� ������ ����� ����������� ���� ����� 5.
-'''
+"""
 
-import random;
+import random
 
 
-N = int(input("������� ����� --> "));
+N = int(input("������� ����� --> "))
 
-A = [x for x in range(1, N+1)];
-B = list([5]);
+A = [x for x in range(1, N + 1)]
+B = list([5])
 
-if N >= 5: A.remove(5);
-random.shuffle(A);
+if N >= 5:
+    A.remove(5)
+random.shuffle(A)
 
-A = B + A;
+A = B + A
 
-print(A);
+print(A)
