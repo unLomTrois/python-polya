@@ -6,7 +6,10 @@
 
 
 def sys_16(num):
-    print("{:04x}".format(num))
+    if num <= 65536:
+        print("{:04x}".format(num))
 
 
-sys_16(int(input("введите число: ")))
+n = int(input("введите число: "))
+
+sys_16(n)

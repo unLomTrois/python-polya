@@ -11,5 +11,6 @@ def show_square(number):
         print("*" * number)
         i += 1
 
+n = int(input("введите число: "))
 
-show_square(int(input("print number --> ")))
+show_square(n)

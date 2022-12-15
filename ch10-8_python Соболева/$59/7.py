@@ -8,5 +8,6 @@
 def show_sys_symbol(num):
     print("-" * num)
 
+n = int(input("введите число: "))
 
-show_sys_symbol(int(input("print number --> ")))
+show_sys_symbol(n)

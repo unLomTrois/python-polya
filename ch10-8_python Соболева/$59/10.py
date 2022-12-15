@@ -4,6 +4,7 @@
 Например, 21 «двадцать один».
 """
 
+
 def show_number(num):
     if 1 <= num < 100:
         res = ""
@@ -78,4 +79,6 @@ def show_number(num):
         print("Ахтунг! Введи двузначное число!")
 
 
-show_number(int(input("print num --> ")))
+n = int(input("введите число: "))
+
+show_number(n)

@@ -16,7 +16,6 @@ def rim(num):
             res += "CM"
             num -= 900
             continue
-
         if num >= 500:
             res += "D"
             num -= 500
@@ -25,7 +24,6 @@ def rim(num):
             res += "CD"
             num -= 400
             continue
-
         if num >= 100:
             res += "C"
             num -= 100
@@ -34,7 +32,6 @@ def rim(num):
             res += "XC"
             num -= 90
             continue
-
         if num >= 50:
             res += "L"
             num -= 50
@@ -43,7 +40,6 @@ def rim(num):
             res += "XL"
             num -= 40
             continue
-
         if num >= 10:
             res += "X"
             num -= 10
@@ -52,7 +48,6 @@ def rim(num):
             res += "IX"
             num -= 9
             continue
-
         if num >= 5:
             res += "V"
             num -= 5
@@ -61,7 +56,6 @@ def rim(num):
             res += "IV"
             num -= 4
             continue
-
         if num >= 1:
             res += "I"
             num -= 1
