@@ -70,6 +70,6 @@ def rim(num):
     print(res)
 
 
-n = int(input("введите число:"))
+n = int(input("введите число: "))
 
 rim(n)

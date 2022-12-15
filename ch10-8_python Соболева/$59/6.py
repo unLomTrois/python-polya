@@ -9,4 +9,4 @@ def sys_16(num):
     print("{:04x}".format(num))
 
 
-sys_16(int(input("введите число:")))
+sys_16(int(input("введите число: ")))

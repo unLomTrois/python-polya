@@ -5,12 +5,10 @@
 """
 
 
-def with_the_last(num):
-    i = 1
-    while num % i != num:
-        print(num % (i * 10) // i)
-        i *= 10
+def from_the_last(num):
+    for digit in str(num)[::-1]:
+        print(digit)
 
-n = int(input("введите число:"))
+n = int(input("введите число: "))
 
-with_the_last(n)
+from_the_last(n)

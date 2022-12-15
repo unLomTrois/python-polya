@@ -9,6 +9,6 @@ def from_the_first(num):
     for digit in str(num):
         print(digit)
 
-n = int(input("введите число:"))
+n = int(input("введите число: "))
 
 from_the_first(n)

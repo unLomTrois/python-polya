@@ -5,16 +5,17 @@
 """
 
 
-def delitel(num):
+def find_delitel(num):
+    res = ""
+    # находим все делители
+    for delitel in range(1, num // 2 + 1):
+        if num % delitel == 0:
+            res += str(delitel) + " "
+    print(res)
     i = 1
-    while i <= num // 2:
-        if num % i == 0:
-            print(i, "|", end=" ")
-        i += 1
-    print()
 
 
-n = int(input("введите число:"))
+n = int(input("введите число: "))
 
 
-delitel(n)
+find_delitel(n)
