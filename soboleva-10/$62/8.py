@@ -1,28 +1,27 @@
-
-'''
+"""
      Заполните массив случайными числами в диапазоне 0..100 и подсчитайте отдельно среднее 
      значение всех элементов, которые < 50, и среднее значение всех элементов, которые >= 50
-'''
+"""
 
-import random;
+import random
 
 
-N = int(input("введите кол-во элементов --> "));
+N = int(input("введите кол-во элементов --> "))
 
-A = [];
+A = []
 for i in range(N):
-    A.append(random.randint(0, 100));
+    A.append(random.randint(0, 100))
 
-print(A);
+print(A)
 
-count = 0;
+count = 0
 for a in A:
     if a < 50:
-        count += 1;
-print('ср значение чисел < 50 - ', count, '|', f'{round(count/N*100, 2)}%');
+        count += 1
+print("ср значение чисел < 50 - ", count, "|", f"{round(count/N*100, 2)}%")
 
-count = 0;
+count = 0
 for a in A:
     if a >= 50:
-        count += 1;
-print('ср значение чисел >= 50 - ', count, '|', f'{round(count/N*100, 2)}%');
+        count += 1
+print("ср значение чисел >= 50 - ", count, "|", f"{round(count/N*100, 2)}%")
