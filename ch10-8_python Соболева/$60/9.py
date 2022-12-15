@@ -7,7 +7,7 @@
 """
 
 
-def deliteli(num):
+def sum_of_delitel(num):
     sum = 0
     for delitel in range(1, num // 2 + 1):
         # находим все делители
@@ -19,8 +19,8 @@ def deliteli(num):
 
 
 for a in range(1, 10000 + 1):
-    a_sum = deliteli(a)
+    a_sum = sum_of_delitel(a)
     for b in range(a + 1, 10000 + 1):
-        b_sum = deliteli(b)
+        b_sum = sum_of_delitel(b)
         if a_sum == b and b_sum == a:
             print(a, b)
