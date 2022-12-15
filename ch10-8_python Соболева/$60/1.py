@@ -10,5 +10,8 @@ def max(a, b, c):
         return b
     return c
 
+a = int(input("введите 1-е число: "))
+b = int(input("введите 2-е число: "))
+с = int(input("введите 3-е число: "))
 
-print(max(4, 2, 88))
+print(max(a, b, с))

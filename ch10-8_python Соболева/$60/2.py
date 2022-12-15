@@ -3,9 +3,8 @@
 Напишите функцию, которая вычисляет количество цифр числа
 """
 
-# функция считает кол-во цифр в числе
-def length(number):
-    return len(str(number))
+def length(num):
+    return len(str(num))
 
 
 print(length(552414234197))

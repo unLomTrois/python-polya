@@ -3,15 +3,9 @@
 Напишите функцию, которая «разворачивает» десятичную запись числа наоборот, например, из 123 получается 321, и из 3210 – 0123
 """
 
-# переворачивает число. Например: 3210 – 0123
-def reverse(number):
-    res = ""
-    i = 1
-    while number % i < number:
-        res += str(number % (i * 10) // i)
-        i *= 10
 
-    return res
+def mirror(num):
+    return str(num)[::-1]
 
 
-print(reverse(23456789))
+print(mirror(3210))

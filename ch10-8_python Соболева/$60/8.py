@@ -1,26 +1,21 @@
 """
-Соболева ПКС-1
-Напишите функцию, которая вычисляет N-ое число Фибоначчи
+РЎРѕР±РѕР»РµРІР° РџРљРЎ-1
+РќР°РїРёС€РёС‚Рµ С„СѓРЅРєС†РёСЋ, РєРѕС‚РѕСЂР°СЏ РІС‹С‡РёСЃР»СЏРµС‚ N-РѕРµ С‡РёСЃР»Рѕ Р¤РёР±РѕРЅР°С‡С‡Рё
 """
 
-import random
 
-# вычисление N-го числа в последовательности Фибоначчи
-def fibonacci(number):
-    i = 0
-    cur = 0
-    # текущий
-    fut = 1
-    # следующий
-    while i < number:
-        a = cur
-        cur = fut
+def fibonacci(num):
+    f1 = 0
+    f2 = 1
+    f_n = f1
+    for i in range(0, num):
+        f_n = f1
+        f1 = f2
+        f2 = f_n + f2
 
-        fut = a + fut
-
-        i += 1
-
-    return cur
+    return f1
 
 
-print(fibonacci(6))
+n = int(input("РІРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: "))
+
+print(fibonacci(n))

@@ -3,16 +3,18 @@
 Напишите функцию, которая вычисляет наименьшее общее кратное двух чисел
 """
 
-# функция находит наименьшее общее кратное двух чисел - smallest common multiple
-def scm(n1, n2):
-    i = n1 if n1 < n2 else n2
-    mult = -1
-    while i > 1:
-        if n1 % i == 0 and n2 % i == 0:
-            mult = i
-        i -= 1
+def nod(a, b):
+    while a != 0 and b != 0:
+        if a > b:
+            a %= b
+        else:
+            b %= a
 
-    return mult
+    return a + b
+
+# нок вычисляется по (а*б) / нод(а, б) 
+def nok(a, b):
+    return (a * b) / nod(a, b)
 
 
-print(scm(63, 3))
+print(nok(7, 57))

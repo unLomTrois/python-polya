@@ -3,16 +3,13 @@
 Напишите функцию, которая вычисляет факториал натурального числа N
 """
 
-import random
-
-# вычисление факториала числа
-def fact(number):
-    res, i = 1, 1
-    while i <= number:
-        res *= i
-        i += 1
-
+def factorial(num):
+    res = 1
+    for n in range(1, num + 1):
+        res *= n
     return res
 
 
-print(fact(7))
+n = int(input("введите число: "))
+
+print(factorial(n))
