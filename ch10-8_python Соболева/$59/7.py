@@ -5,8 +5,8 @@
 """
 
 
-def show_sys_symbol(number):
-    print("-" * number)
+def show_sys_symbol(num):
+    print("-" * num)
 
 
 show_sys_symbol(int(input("print number --> ")))

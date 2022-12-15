@@ -5,8 +5,8 @@
 """
 
 
-def sys_8(number):
-    print("{:010o}".format(number))
+def sys_8(num):
+    print("{:010o}".format(num))
 
 
 sys_8(int(input("введите число:")))

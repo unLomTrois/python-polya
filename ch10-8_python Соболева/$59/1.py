@@ -5,10 +5,10 @@
 """
 
 
-def with_the_last(number):
+def with_the_last(num):
     i = 1
-    while number % i != number:
-        print(number % (i * 10) // i)
+    while num % i != num:
+        print(num % (i * 10) // i)
         i *= 10
 
 n = int(input("введите число:"))

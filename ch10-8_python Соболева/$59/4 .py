@@ -5,66 +5,66 @@
 """
 
 
-def rim(number):
+def rim(num):
     res = ""
-    while number != 0:
-        if number >= 1000:
+    while num != 0:
+        if num >= 1000:
             res += "M"
-            number -= 1000
+            num -= 1000
             continue
-        if number >= 900:
+        elif num >= 900:
             res += "CM"
-            number -= 900
+            num -= 900
             continue
 
-        if number >= 500:
+        if num >= 500:
             res += "D"
-            number -= 500
+            num -= 500
             continue
-        if number >= 400:
+        elif num >= 400:
             res += "CD"
-            number -= 400
+            num -= 400
             continue
 
-        if number >= 100:
+        if num >= 100:
             res += "C"
-            number -= 100
+            num -= 100
             continue
-        if number >= 90:
+        elif num >= 90:
             res += "XC"
-            number -= 90
+            num -= 90
             continue
 
-        if number >= 50:
+        if num >= 50:
             res += "L"
-            number -= 50
+            num -= 50
             continue
-        if number >= 40:
+        elif num >= 40:
             res += "XL"
-            number -= 40
+            num -= 40
             continue
 
-        if number >= 10:
+        if num >= 10:
             res += "X"
-            number -= 10
+            num -= 10
             continue
-        if number >= 9:
+        elif num >= 9:
             res += "IX"
-            number -= 9
+            num -= 9
             continue
 
-        if number >= 5:
+        if num >= 5:
             res += "V"
-            number -= 5
+            num -= 5
             continue
-        if number >= 4:
+        elif num >= 4:
             res += "IV"
-            number -= 4
+            num -= 4
             continue
 
-        if number >= 1:
+        if num >= 1:
             res += "I"
-            number -= 1
+            num -= 1
             continue
 
     print(res)

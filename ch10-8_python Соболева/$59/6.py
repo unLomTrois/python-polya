@@ -5,8 +5,8 @@
 """
 
 
-def sys_16(number):
-    print("{:04x}".format(number))
+def sys_16(num):
+    print("{:04x}".format(num))
 
 
 sys_16(int(input("введите число:")))

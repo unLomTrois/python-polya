@@ -5,8 +5,8 @@
 """
 
 
-def from_the_first(number):
-    for digit in str(number):
+def from_the_first(num):
+    for digit in str(num):
         print(digit)
 
 n = int(input("введите число:"))
