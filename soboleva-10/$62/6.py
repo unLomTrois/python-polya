@@ -1,22 +1,22 @@
 """
-     Заполните массив случайными числами в диапазоне 20..100 и подсчитайте отдельно число чётных и нечётных элементов.
+Соболева ПКС-1
+Заполните массив случайными числами в диапазоне 20..100 
+и подсчитайте отдельно число чётных и нечётных элементов.
 """
 
 import random
 
 
-N = int(input("введите кол-во элементов --> "))
+n = int(input("введите длину массива: "))
 
-A = []
-for i in range(N):
-    A.append(random.randint(20, 100))
+arr = [random.randint(20, 100) for _ in range(n)]
 
-print(A)
+print(arr)
 
 count = 0
-for a in A:
-    if a % 2 == 0:
+for element in arr:
+    if element % 2 == 0:
         count += 1
 
-print("четных чисел - ", count, "|", f"{round(count/N*100, 2)}%")
-print("нечетных чисел - ", N - count, "|", f"{round((N-count)/N*100, 2)}%")
+print("четных:", count)
+print("нечетных:", n - count)

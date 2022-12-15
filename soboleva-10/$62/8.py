@@ -1,27 +1,30 @@
 """
-     Заполните массив случайными числами в диапазоне 0..100 и подсчитайте отдельно среднее 
-     значение всех элементов, которые < 50, и среднее значение всех элементов, которые >= 50
+Соболева ПКС-1
+Заполните массив случайными числами в диапазоне 0..100 и подсчитайте отдельно среднее 
+значение всех элементов, которые < 50, и среднее значение всех элементов, которые >= 50
 """
 
 import random
 
 
-N = int(input("введите кол-во элементов --> "))
+n = int(input("введите длину массива: "))
 
-A = []
-for i in range(N):
-    A.append(random.randint(0, 100))
+arr = [random.randint(0, 100) for x in range(n)]
 
-print(A)
+print(arr)
 
 count = 0
-for a in A:
-    if a < 50:
+sum = 0
+for num in arr:
+    if num < 50:
         count += 1
-print("ср значение чисел < 50 - ", count, "|", f"{round(count/N*100, 2)}%")
+        sum += num
+print("меньше 50:", count, "среднее:", sum / count )
 
 count = 0
-for a in A:
-    if a >= 50:
+sum = 0
+for num in arr:
+    if num >= 50:
         count += 1
-print("ср значение чисел >= 50 - ", count, "|", f"{round(count/N*100, 2)}%")
+        sum += num 
+print("больше 50:", count, "среднее:", sum / count)
