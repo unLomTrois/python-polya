@@ -1,22 +1,34 @@
 """
-    Напишите программу, которая находит минимальный и максимальный элементы матрицы и их индексы.
+Соболева ПКС-1
+Напишите программу, которая находит минимальный и максимальный элементы матрицы и их индексы.
 """
 
-A = [[44, 55, 66], [11, 77, 69], [34, 78, 17]]
-print(A)
+matrix = [[44, 55, 66], [11, 77, 69], [34, 78, 17]]
+print(matrix)
 
-minN = A[0][0]
-maxN = A[0][0]
-i1, i2, j1, j2 = 0, 0, 0, 0
-# i1 - row index min, i2 = row index max, j1 - column index min, j2 - column index max
-for k in range(len(A)):
-    for l in range(len(A[k])):
-        if A[k][l] < minN:
-            minN = A[k][l]
-            i1, j1 = k, l
-        if A[k][l] > maxN:
-            maxN = A[k][l]
-            i2, j2 = k, l
+min = matrix[0][0]
+min_row_index = 0
+min_num_index = 0
+max = matrix[0][0]
+max_row_index = 0
+max_num_index = 0
 
-print("min =", minN, " | ", i1, j1)
-print("max =", maxN, " | ", i2, j2)
+row_index = 0
+for row in matrix:
+    num_index = 0
+    for num in row:
+        if num > max:
+            max = num
+            max_row_index = row_index
+            max_num_index = num_index
+
+        if num < min:
+            min = num
+            min_row_index = row_index
+            min_num_index = num_index
+        num_index += 1
+    row_index += 1
+
+
+print(min, min_row_index, min_num_index)
+print(max, max_row_index, max_num_index)
