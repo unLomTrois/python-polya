@@ -1,15 +1,14 @@
 """
-     Найдите в массиве все числа Фибоначчи и скопируйте их в новый массив.
+Соболева ПКС-1
+Найдите в массиве все числа Фибоначчи и скопируйте их в новый массив.
 """
 
 import random
 
 
-def isFibNum(n):
+def is_fibonacci(n):
     cur = 0
-    # текущий
     fut = 1
-    # следующий
     while True:
         a = cur
         cur = fut
@@ -24,12 +23,8 @@ def isFibNum(n):
     return False
 
 
-n = 100
-# кол-во элементов в списке
-a = [random.randint(1, 100) for i in range(n)]
+arr = [random.randint(1, 100) for i in range(100)]
 
-print("массив случайных чисел:\n", a, f" -> {n} элементов\n")
+fibonacci_arr = [num for num in arr if is_fibonacci(num)]
 
-b = [num for num in a if isFibNum(num)]
-
-print("вытекающий массив чисел из последовательности Фибоначчи:\n", b)
+print(fibonacci_arr)
