@@ -6,26 +6,26 @@
 from random import randint
 
 
-A = [randint(1, 100) for x in range(30)]
-B = []
+a = [randint(1, 100) for x in range(30)]
+b = []
 
-print("before:", A)
+print("before:", a)
 
 i = 0
-while i < len(A) - 1:
+while i < len(a) - 1:
     j = i + 1
-    while j < len(A):
-        if A[i] > A[j]:
-            A[i], A[j] = A[j], A[i]
+    while j < len(a):
+        if a[i] > a[j]:
+            a[i], a[j] = a[j], a[i]
         j += 1
 
     i += 1
 
 i = 0
-while i < len(A) - 1:
-    if not A[i] in B:
-        B.append(A[i])
+while i < len(a) - 1:
+    if not a[i] in b:
+        b.append(a[i])
     i += 1
 
-print("after: ", A)
-print("различных чисел:", len(B))
+print("after: ", a)
+print("различных чисел:", len(b))
