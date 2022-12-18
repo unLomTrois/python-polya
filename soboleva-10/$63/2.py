@@ -1,25 +1,22 @@
 """
-    ������� ������ � ���������� � ������� (�� ���� ������) ���������� ���������, ������� 
-    ������������ ��������.
+Соболева ПКС-1
+Введите массив с клавиатуры и найдите (за один проход) количество элементов, имеющих максимальное значение.
 """
 
+arr = []
+arr_len = int(input("введите количество элементов массива: "))
 
-print("������� ����� ����� (10) ��� ����� � ������")
+for i in range(arr_len):
+    arr.append(int(input(f"введите {i+1}-й элемент: ")))
 
-A = []
-count, maxN = 1, 0
+max = arr[0]  # предполагаем максимальный элемент
+counter = 0  # счетчик
 
-num = int(input("-> "))
-maxN = num
-A.append(num)
-for i in range(9):
-    num = int(input("-> "))
-    if maxN < num:
-        maxN = num
-        count = 0
-    if maxN == num:
-        count += 1
+for num in arr:
+    if num > max:
+        max = num
+        counter = 0
+    if num == max:
+        counter += 1
 
-    A.append(num)
-
-print("\n", A, "\n", "max count =", count, "|", maxN)
+print("максимальное число:", max, "встречено:", counter, "раз")
