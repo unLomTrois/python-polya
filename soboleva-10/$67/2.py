@@ -1,39 +1,36 @@
 """
-     Напишите программу, которая находит минимальный и максимальный из чётных 
-     положительных элементов матрицы и их индексы. Учтите, что таких элементов в матрице может и не быть.
+Соболева ПКС-1
+Напишите программу, которая находит минимальный и максимальный из чётных 
+положительных элементов матрицы и их индексы. Учтите, что таких элементов в матрице может и не быть.
 """
+import random
 
-A = [[44, 55, 66], [11, 77, 69], [34, 78, 17]]
-print(A)
+matrix = [[random.randint(1, 100) for x in range(3)] for row in range(3)]
+print(matrix)
 
-minResereve = 0
-maxResereve = 0
+min = matrix[0][0]
+min_row_index = 0
+min_num_index = 0
+max = matrix[0][0]
+max_row_index = 0
+max_num_index = 0
 
-if A[0][0] >= 0:
-    minN = A[0][0]
-    maxN = A[0][0]
-else:
-    minN = minResereve
-    maxN = maxResereve
+row_index = 0
+for row in matrix:
+    num_index = 0
+    for num in row:
+        if num % 2 == 0 and num > max:
+            max = num
+            max_row_index = row_index
+            max_num_index = num_index
 
-i1, i2, j1, j2 = 0, 0, 0, 0
-# i1 - row index min, i2 = row index max, j1 - column index min, j2 - column index max
-for k in range(len(A)):
-    for l in range(len(A[k])):
-        if A[k][l] >= 0 and A[k][l] % 2 == 0:
-            if A[k][l] < minN:
-                minN = A[k][l]
-                i1, j1 = k, l
-            if A[k][l] > maxN:
-                maxN = A[k][l]
-                i2, j2 = k, l
+        if num % 2 == 0 and num < min:
+            min = num
+            min_row_index = row_index
+            min_num_index = num_index
+        num_index += 1
+    row_index += 1
 
-if minN == minResereve:
-    print("минимального значения подходящего под условия нет")
-else:
-    print("min =", minN, " | ", i1, j1)
 
-if maxN == maxResereve:
-    print("максимального значения подходящего под условия нет")
-else:
-    print("max =", maxN, " | ", i2, j2)
+print(min, min_row_index, min_num_index)
+print(max, max_row_index, max_num_index)

@@ -1,10 +1,16 @@
 """
-     Напишите программу, которая выводит на экран строку матрицы, сумма элементов которой наибольшая.
+Соболева ПКС-1
+Напишите программу, которая выводит на экран строку матрицы, сумма элементов которой наибольшая.
 """
 
-A = [[44, 55, 66], [11, 77, 69], [34, 78, 17]]
-print(A)
+import random
 
-B = [sum(row) for row in A]
+matrix = [[random.randint(1, 100) for x in range(3)] for row in range(3)]
+print(matrix)
 
-print(A[B.index(max(B))])
+sum_of_rows = [sum(row) for row in matrix]
+print(sum_of_rows)
+max_row = max(sum_of_rows)
+n = sum_of_rows.index(max_row)
+
+print(matrix[n])
