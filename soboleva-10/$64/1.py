@@ -1,31 +1,30 @@
-
-'''
+"""
      Напишите программу, которая сортирует массив и находит количество различных чисел в нём.
-'''
+"""
 
 from random import randint
 
 
-A = [randint(1,100) for x in range(30)];
-B = [];
+A = [randint(1, 100) for x in range(30)]
+B = []
 
-print('before:', A);
+print("before:", A)
 
-i = 0;
+i = 0
 while i < len(A) - 1:
-    j = i + 1;
+    j = i + 1
     while j < len(A):
         if A[i] > A[j]:
-            A[i], A[j] = A[j], A[i];
-        j+=1;
+            A[i], A[j] = A[j], A[i]
+        j += 1
 
-    i+=1;
+    i += 1
 
-i = 0;
+i = 0
 while i < len(A) - 1:
     if not A[i] in B:
-        B.append(A[i]);
-    i+=1;
+        B.append(A[i])
+    i += 1
 
-print('after: ', A);
-print('различных чисел:', len(B));
+print("after: ", A)
+print("различных чисел:", len(B))
