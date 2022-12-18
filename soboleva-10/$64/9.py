@@ -1,18 +1,18 @@
 
 '''
-     *Напишите программу, которая сравнивает количество перестановок при сортировке одного и 
-     того же массива разными методами. Проведите эксперименты для возрастающей последовательности 
-     (уже отсортированной), убывающей (отсортированной в обратном порядке) и случайной.
+     *РќР°РїРёС€РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ СЃСЂР°РІРЅРёРІР°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє РїСЂРё СЃРѕСЂС‚РёСЂРѕРІРєРµ РѕРґРЅРѕРіРѕ Рё 
+     С‚РѕРіРѕ Р¶Рµ РјР°СЃСЃРёРІР° СЂР°Р·РЅС‹РјРё РјРµС‚РѕРґР°РјРё. РџСЂРѕРІРµРґРёС‚Рµ СЌРєСЃРїРµСЂРёРјРµРЅС‚С‹ РґР»СЏ РІРѕР·СЂР°СЃС‚Р°СЋС‰РµР№ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё 
+     (СѓР¶Рµ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅРѕР№), СѓР±С‹РІР°СЋС‰РµР№ (РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅРѕР№ РІ РѕР±СЂР°С‚РЅРѕРј РїРѕСЂСЏРґРєРµ) Рё СЃР»СѓС‡Р°Р№РЅРѕР№.
 '''
 
 
 from random import randint
 
 
-# сортирует массив методом пузырька. direct - направление сортировки (> and <)
+# СЃРѕСЂС‚РёСЂСѓРµС‚ РјР°СЃСЃРёРІ РјРµС‚РѕРґРѕРј РїСѓР·С‹СЂСЊРєР°. direct - РЅР°РїСЂР°РІР»РµРЅРёРµ СЃРѕСЂС‚РёСЂРѕРІРєРё (> and <)
 def bubble_sort(arr, direct):
     count = 0;
-    l = len(arr); # l - длина массива
+    l = len(arr); # l - РґР»РёРЅР° РјР°СЃСЃРёРІР°
 
     if direct == '<':
         for i in range(l):
@@ -29,10 +29,10 @@ def bubble_sort(arr, direct):
 
     return count;
 
-# сортирует массив методом выборочной сортировки. direct - направление сортировки (> and <) 
+# СЃРѕСЂС‚РёСЂСѓРµС‚ РјР°СЃСЃРёРІ РјРµС‚РѕРґРѕРј РІС‹Р±РѕСЂРѕС‡РЅРѕР№ СЃРѕСЂС‚РёСЂРѕРІРєРё. direct - РЅР°РїСЂР°РІР»РµРЅРёРµ СЃРѕСЂС‚РёСЂРѕРІРєРё (> and <) 
 def selection_sort(arr, direct):
     count = 0;
-    l = len(arr); # l - длина массива
+    l = len(arr); # l - РґР»РёРЅР° РјР°СЃСЃРёРІР°
 
     if direct == '<':
         for i in range(l-1):
@@ -55,7 +55,7 @@ def selection_sort(arr, direct):
 
     return count;
 
-# сортирует переданный массив методом быстрой сортировки. direct - направление сортировки (> and <) (Для того, чтобы отсортировать весь массив, нужно вызвать эту процедуру так: qSort (A,0,N-1) )
+# СЃРѕСЂС‚РёСЂСѓРµС‚ РїРµСЂРµРґР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ РјРµС‚РѕРґРѕРј Р±С‹СЃС‚СЂРѕР№ СЃРѕСЂС‚РёСЂРѕРІРєРё. direct - РЅР°РїСЂР°РІР»РµРЅРёРµ СЃРѕСЂС‚РёСЂРѕРІРєРё (> and <) (Р”Р»СЏ С‚РѕРіРѕ, С‡С‚РѕР±С‹ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ РІРµСЃСЊ РјР°СЃСЃРёРІ, РЅСѓР¶РЅРѕ РІС‹Р·РІР°С‚СЊ СЌС‚Сѓ РїСЂРѕС†РµРґСѓСЂСѓ С‚Р°Рє: qSort (A,0,N-1) )
 def quick_sort(arr, nStart, nEnd, direct):
     count = 0;
 
@@ -87,7 +87,7 @@ C = [randint(1,10) for x in range(30)];
 print(' arrays for sort:', '\n1 - ', A, '\n2 - ', B, '\n3 - ', C );
 
 
-# тестирование массивов методом пузырька
+# С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІРѕРІ РјРµС‚РѕРґРѕРј РїСѓР·С‹СЂСЊРєР°
 print('\n', 'bubble sort:');
 Acopy = A.copy();
 Bcopy = B.copy();
@@ -96,7 +96,7 @@ print(' -> asc sort');
 counterA = bubble_sort(Acopy, '>');
 counterB = bubble_sort(Bcopy, '>');
 counterC = bubble_sort(Ccopy, '>');
-print(f' array 1: {counterA} перестановок\n array 2: {counterB} перестановок\n array 3: {counterC} перестановок');
+print(f' array 1: {counterA} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє\n array 2: {counterB} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє\n array 3: {counterC} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє');
 Acopy = A.copy();
 Bcopy = B.copy();
 Ccopy = C.copy();
@@ -104,11 +104,11 @@ print(' -> desc sort');
 counterA = bubble_sort(Acopy, '<');
 counterB = bubble_sort(Bcopy, '<');
 counterC = bubble_sort(Ccopy, '<');
-print(f' array 1: {counterA} перестановок\n array 2: {counterB} перестановок\n array 3: {counterC} перестановок');
+print(f' array 1: {counterA} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє\n array 2: {counterB} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє\n array 3: {counterC} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє');
 #****************************
 
 
-# тестирование массивов методом выборки
+# С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІРѕРІ РјРµС‚РѕРґРѕРј РІС‹Р±РѕСЂРєРё
 print('\n', 'selection sort:');
 Acopy = A.copy();
 Bcopy = B.copy();
@@ -117,7 +117,7 @@ print(' -> asc sort');
 counterA = selection_sort(Acopy, '>');
 counterB = selection_sort(Bcopy, '>');
 counterC = selection_sort(Ccopy, '>');
-print(f' array 1: {counterA} перестановок\n array 2: {counterB} перестановок\n array 3: {counterC} перестановок');
+print(f' array 1: {counterA} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє\n array 2: {counterB} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє\n array 3: {counterC} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє');
 Acopy = A.copy();
 Bcopy = B.copy();
 Ccopy = C.copy();
@@ -125,11 +125,11 @@ print(' -> desc sort');
 counterA = selection_sort(Acopy, '<');
 counterB = selection_sort(Bcopy, '<');
 counterC = selection_sort(Ccopy, '<');
-print(f' array 1: {counterA} перестановок\n array 2: {counterB} перестановок\n array 3: {counterC} перестановок');
+print(f' array 1: {counterA} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє\n array 2: {counterB} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє\n array 3: {counterC} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє');
 #****************************
 
 
-# тестирование массивов методом быстрой сортировки
+# С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІРѕРІ РјРµС‚РѕРґРѕРј Р±С‹СЃС‚СЂРѕР№ СЃРѕСЂС‚РёСЂРѕРІРєРё
 print('\n', 'quick sort:');
 Acopy = A.copy();
 Bcopy = B.copy();
@@ -138,7 +138,7 @@ print(' -> asc sort');
 counterA = quick_sort(Acopy, 0, len(A)-1, '>');
 counterB = quick_sort(Bcopy, 0, len(B)-1, '>');
 counterC = quick_sort(Ccopy, 0, len(C)-1, '>');
-print(f' array 1: {counterA} перестановок\n array 2: {counterB} перестановок\n array 3: {counterC} перестановок');
+print(f' array 1: {counterA} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє\n array 2: {counterB} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє\n array 3: {counterC} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє');
 Acopy = A.copy();
 Bcopy = B.copy();
 Ccopy = C.copy();
@@ -146,5 +146,5 @@ print(' -> desc sort');
 counterA = quick_sort(Acopy, 0, len(A)-1, '<');
 counterB = quick_sort(Bcopy, 0, len(B)-1, '<');
 counterC = quick_sort(Ccopy, 0, len(C)-1, '<');
-print(f' array 1: {counterA} перестановок\n array 2: {counterB} перестановок\n array 3: {counterC} перестановок');
+print(f' array 1: {counterA} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє\n array 2: {counterB} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє\n array 3: {counterC} РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє');
 #****************************
