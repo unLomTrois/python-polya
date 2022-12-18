@@ -3,9 +3,7 @@
 Напишите программу, которая находит минимальный и максимальный элементы матрицы и их индексы.
 """
 
-import random
-
-matrix = [[random.randint(1, 100) for x in range(3)] for row in range(3)]
+matrix = [[44, 55, 66], [11, 77, 69], [34, 78, 17]]
 print(matrix)
 
 min = matrix[0][0]
