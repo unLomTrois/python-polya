@@ -1,35 +1,39 @@
+"""
+     РќР°РїРёС€РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ РЅР°С…РѕРґРёС‚ РјРёРЅРёРјР°Р»СЊРЅС‹Р№ Рё РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ РёР· С‡С‘С‚РЅС‹С… 
+     РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ РјР°С‚СЂРёС†С‹ Рё РёС… РёРЅРґРµРєСЃС‹. РЈС‡С‚РёС‚Рµ, С‡С‚Рѕ С‚Р°РєРёС… СЌР»РµРјРµРЅС‚РѕРІ РІ РјР°С‚СЂРёС†Рµ РјРѕР¶РµС‚ Рё РЅРµ Р±С‹С‚СЊ.
+"""
 
-'''
-     Напишите программу, которая находит минимальный и максимальный из чётных 
-     положительных элементов матрицы и их индексы. Учтите, что таких элементов в матрице может и не быть.
-'''
-
-A = [[44, 55, 66], [11, 77, 69], [34, 78, 17]];
+A = [[44, 55, 66], [11, 77, 69], [34, 78, 17]]
 print(A)
 
-minResereve = 0;
-maxResereve = 0;
+minResereve = 0
+maxResereve = 0
 
 if A[0][0] >= 0:
-    minN = A[0][0];
-    maxN = A[0][0];
+    minN = A[0][0]
+    maxN = A[0][0]
 else:
-    minN = minResereve;
-    maxN = maxResereve;
+    minN = minResereve
+    maxN = maxResereve
 
-i1, i2, j1, j2 = 0, 0, 0, 0; # i1 - row index min, i2 = row index max, j1 - column index min, j2 - column index max
+i1, i2, j1, j2 = 0, 0, 0, 0
+# i1 - row index min, i2 = row index max, j1 - column index min, j2 - column index max
 for k in range(len(A)):
     for l in range(len(A[k])):
-        if A[k][l] >= 0 and A[k][l]%2 == 0:
+        if A[k][l] >= 0 and A[k][l] % 2 == 0:
             if A[k][l] < minN:
-                minN = A[k][l];
-                i1, j1 = k, l;
+                minN = A[k][l]
+                i1, j1 = k, l
             if A[k][l] > maxN:
-                maxN = A[k][l];
-                i2, j2 = k, l;
+                maxN = A[k][l]
+                i2, j2 = k, l
 
-if minN == minResereve: print('минимального значения подходящего под условия нет')
-else: print('min =', minN, ' | ', i1, j1)
+if minN == minResereve:
+    print("РјРёРЅРёРјР°Р»СЊРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РїРѕРґС…РѕРґСЏС‰РµРіРѕ РїРѕРґ СѓСЃР»РѕРІРёСЏ РЅРµС‚")
+else:
+    print("min =", minN, " | ", i1, j1)
 
-if maxN == maxResereve: print('максимального значения подходящего под условия нет')
-else: print('max =', maxN, ' | ', i2, j2)
+if maxN == maxResereve:
+    print("РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РїРѕРґС…РѕРґСЏС‰РµРіРѕ РїРѕРґ СѓСЃР»РѕРІРёСЏ РЅРµС‚")
+else:
+    print("max =", maxN, " | ", i2, j2)

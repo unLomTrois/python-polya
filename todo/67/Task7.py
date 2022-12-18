@@ -1,44 +1,45 @@
-
-'''
-     Íàïèøèòå ïğîãğàììó, êîòîğàÿ çàïîëíÿåò ìàòğèöó 7x7 ñëó÷àéíûìè ÷èñëàìè, à çàòåì 
-     çàïèñûâàåò â ıëåìåíòû, îòìå÷åííûå íà ğèñóíêàõ, ÷èñëî 99:
-'''
+"""
+     ĞĞ°Ğ¿Ğ¸ÑˆĞ¸Ñ‚Ğµ Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ñƒ, ĞºĞ¾Ñ‚Ğ¾Ñ€Ğ°Ñ Ğ·Ğ°Ğ¿Ğ¾Ğ»Ğ½ÑĞµÑ‚ Ğ¼Ğ°Ñ‚Ñ€Ğ¸Ñ†Ñƒ 7x7 ÑĞ»ÑƒÑ‡Ğ°Ğ¹Ğ½Ñ‹Ğ¼Ğ¸ Ñ‡Ğ¸ÑĞ»Ğ°Ğ¼Ğ¸, Ğ° Ğ·Ğ°Ñ‚ĞµĞ¼ 
+     Ğ·Ğ°Ğ¿Ğ¸ÑÑ‹Ğ²Ğ°ĞµÑ‚ Ğ² ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ñ‹, Ğ¾Ñ‚Ğ¼ĞµÑ‡ĞµĞ½Ğ½Ñ‹Ğµ Ğ½Ğ° Ñ€Ğ¸ÑÑƒĞ½ĞºĞ°Ñ…, Ñ‡Ğ¸ÑĞ»Ğ¾ 99:
+"""
 
 from random import randint
 
-k, l = 7, 7;
-low, high = -9, -1;
+k, l = 7, 7
+low, high = -9, -1
 
-A = [[randint(low,high) for y in range(l)] for x in range(k)];
+A = [[randint(low, high) for y in range(l)] for x in range(k)]
 
-# âûâîä ğèñóíêà A
+# Ğ²Ñ‹Ğ²Ğ¾Ğ´ Ñ€Ğ¸ÑÑƒĞ½ĞºĞ° A
 for i in range(len(A)):
     for j in range(len(A[i])):
-        if (i > 0 and i < len(A)-1) and (j > 0 and j < len(A[i])-1):
+        if (i > 0 and i < len(A) - 1) and (j > 0 and j < len(A[i]) - 1):
             if j >= len(A) - i - 1:
-                A[i][j] = 99;
+                A[i][j] = 99
 for i in range(len(A)):
     print(A[i])
 print()
 
-A = [[randint(low,high) for y in range(l)] for x in range(k)];
+A = [[randint(low, high) for y in range(l)] for x in range(k)]
 
-# âûâîä ğèñóíêà Á
+# Ğ²Ñ‹Ğ²Ğ¾Ğ´ Ñ€Ğ¸ÑÑƒĞ½ĞºĞ° Ğ‘
 for i in range(len(A)):
     for j in range(len(A[i])):
-        if (i > 0 and i < len(A)-1) and (j > 0 and j < len(A[i])-1):
+        if (i > 0 and i < len(A) - 1) and (j > 0 and j < len(A[i]) - 1):
             if j < len(A) - i:
-                A[i][j] = 99;
+                A[i][j] = 99
 for i in range(len(A)):
     print(A[i])
 print()
 
-A = [[randint(low,high) for y in range(l)] for x in range(k)];
+A = [[randint(low, high) for y in range(l)] for x in range(k)]
 
-# âûâîä ğèñóíêà Â
+# Ğ²Ñ‹Ğ²Ğ¾Ğ´ Ñ€Ğ¸ÑÑƒĞ½ĞºĞ° Ğ’
 for i in range(4):
-    for j in range(3-i, 3+i+1): A[i][j] = 99;
-    for j in range(3-i, 3+i+1): A[6-i][j] = 99;
+    for j in range(3 - i, 3 + i + 1):
+        A[i][j] = 99
+    for j in range(3 - i, 3 + i + 1):
+        A[6 - i][j] = 99
 
 for i in range(len(A)):
     print(A[i])
