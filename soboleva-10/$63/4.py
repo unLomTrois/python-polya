@@ -1,25 +1,25 @@
 """
-    *Заполните массив случайными числами в диапазоне 10..12 и найдите длину самой длинной последовательности стоящих рядом одинаковых последовательностей
+Соболева ПКС-1
+Заполните массив случайными числами в диапазоне 10..12 
+и найдите длину самой длинной последовательности стоящих рядом одинаковых последовательностей
 """
 
 import random
 
-N = 30
-# кол-во элементов в массиве
-A = [random.randint(10, 12) for i in range(N)]
+arr = [random.randint(10, 12) for x in range(100)]
 
-maxCount, count = 1, 1
-# maxCount - максимальное кол-во, count - текущая кол-во
-for i in range(1, N):
-    if A[i - 1] == A[i]:
-        count += 1
+max, counter = 1, 1
+
+for i in range(1, len(arr)):
+    if arr[i - 1] == arr[i]:
+        counter += 1
     else:
-        if count >= maxCount:
-            maxCount = count
-        count = 1
+        if counter >= max:
+            max = counter
+        counter = 1
 
-if count > maxCount:
-    maxCount = count
+if counter > max:
+    max = counter
 
-print(A)
-print(maxCount)
+print(arr)
+print(max)
