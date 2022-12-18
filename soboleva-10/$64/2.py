@@ -1,24 +1,26 @@
 """
-     Напишите программу, в которой сортировка выполняется «методом камня» – самый тяжёлый» элемент опускается в конец массива.
+Соболева ПКС-1
+Напишите программу, в которой сортировка выполняется «методом камня» – самый тяжёлый» элемент опускается в конец массива.
 """
 
-from random import randint
+import random
 
 
-def Sort(A):
+def rock_sort(arr):
     i = 0
-    while i < len(A) - 1:
+    n = len(arr)
+    while i < n:
         j = i + 1
-        while j < len(A):
-            if A[i] > A[j]:
-                A[i], A[j] = A[j], A[i]
+        while j < n:
+            if arr[i] > arr[j]:
+                arr[i], arr[j] = arr[j], arr[i]
             j += 1
         i += 1
 
-    return A
+    return arr
 
 
-A = [randint(1, 100) for x in range(30)]
+arr = [random.randint(1, 100) for x in range(100)]
 
-print("before:", A)
-print("after: ", Sort(A))
+print("несортированный:", arr)
+print("сортированный: ", rock_sort(arr))

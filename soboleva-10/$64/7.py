@@ -1,35 +1,37 @@
 """
-     Напишите программу, которая сортирует первую половину массива по возрастанию, а вторую – по убыванию 
-     (элементы из первой половины не должны попадать во вторую и наоборот)
+Соболева ПКС-1
+Напишите программу, которая сортирует первую половину массива по возрастанию, а вторую – по убыванию 
+(элементы из первой половины не должны попадать во вторую и наоборот)
 """
 
 
-from random import randint
+import random
 
 
-def Sort(A):
+def sort(arr):
     i = 0
-    while i < len(A) // 2 - 1:
+    n = len(arr)
+    while i < n // 2 - 1:
         j = i + 1
-        while j < len(A) // 2:
-            if A[i] > A[j]:
-                A[i], A[j] = A[j], A[i]
+        while j < n // 2:
+            if arr[i] > arr[j]:
+                arr[i], arr[j] = arr[j], arr[i]
             j += 1
         i += 1
 
-    i = len(A) - 1
-    while i > len(A) // 2 + 1:
+    i = n - 1
+    while i > n // 2 + 1:
         j = i - 1
-        while j > len(A) // 2:
-            if A[i] > A[j]:
-                A[i], A[j] = A[j], A[i]
+        while j > n // 2:
+            if arr[i] > arr[j]:
+                arr[i], arr[j] = arr[j], arr[i]
             j -= 1
         i -= 1
 
-    return A
+    return arr
 
 
-A = [randint(1, 10000) for x in range(30)]
+arr = [random.randint(1, 100) for x in range(100)]
 
-print("before:", A)
-print("after: ", Sort(A))
+print("несортированный:", arr)
+print("сортированный: ", sort(arr))

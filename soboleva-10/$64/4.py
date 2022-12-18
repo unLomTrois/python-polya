@@ -1,18 +1,20 @@
 """
-     Напишите вариант метода пузырька, который заканчивает работу, если на очередном шаге внешнего цикла не было перестановок.
+Соболева ПКС-1
+Напишите вариант метода пузырька, который заканчивает работу, если на очередном шаге внешнего цикла не было перестановок.
 """
 
-from random import randint
+import random
 
 
-def Sort(A):
+def sort(arr):
     i = 0
-    while i < len(A) - 1:
+    n = len(arr)
+    while i < n - 1:
         j = i + 1
         log = True
-        while j < len(A):
-            if A[i] > A[j]:
-                A[i], A[j] = A[j], A[i]
+        while j < n:
+            if arr[i] > arr[j]:
+                arr[i], arr[j] = arr[j], arr[i]
                 log = False
             j += 1
 
@@ -20,10 +22,10 @@ def Sort(A):
             break
         i += 1
 
-    return A
+    return arr
 
 
-A = [randint(1, 100) for x in range(30)]
+arr = [random.randint(1, 100) for x in range(100)]
 
-print("before:", A)
-print("after: ", Sort(A))
+print("несортированный:", arr)
+print("сортированный: ", sort(arr))

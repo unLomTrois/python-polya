@@ -1,34 +1,35 @@
 """
-     . �������� ���������, ������� ��������� ������, � ����� ������� ������������ �� �����, 
-       ������������� � ������� ��������� ���.
+Соболева ПКС-1
+Напишите программу, которая сортирует массив, а затем находит максимальное из чисел, 
+встречающихся в массиве несколько раз
 """
 
-from random import randint
+import random
 
 
-def Sort(A):
+def sort(arr):
     i = 0
-    while i < len(A) - 1:
+    n = len(arr)
+    while i < n - 1:
         j = i + 1
-        while j < len(A):
-            if A[i] > A[j]:
-                A[i], A[j] = A[j], A[i]
+        while j < n:
+            if arr[i] > arr[j]:
+                arr[i], arr[j] = arr[j], arr[i]
             j += 1
         i += 1
 
-    return A
+    return arr
 
 
-A = [randint(1, 10) for x in range(30)]
-print("before:", A)
+arr = [random.randint(1, 10) for x in range(100)]
 
-A = Sort(A)
+arr = sort(arr)
 count = 1
-for i in range(len(A) - 1, 0, -1):
-    if A[i] == A[i - 1]:
+for i in range(len(arr) - 1, 0, -1):
+    if arr[i] == arr[i - 1]:
         count += 1
     else:
         break
 
-print("after: ", A)
+print(arr)
 print(count)

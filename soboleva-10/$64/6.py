@@ -1,36 +1,38 @@
 """
-      Напишите программу, которая сортирует массив по убыванию суммы цифр числа.
+Соболева ПКС-1
+Напишите программу, которая сортирует массив по убыванию суммы цифр числа.
 """
 
 
-from random import randint
+import random
 
 
 # суммирует цифры числа
-def SumDigs(num):
-    _sum = 0
+def sum_digit(num):
+    sum = 0
     for digit in str(num):
         digit = int(digit)
-        _sum += digit ** len(str(num))
+        sum += digit ** len(str(num))
 
-    return _sum
+    return sum
 
 
-def Sort(A):
+def sort(arr):
     i = 0
-    while i < len(A) - 1:
+    n = len(arr)
+    while i < n - 1:
         j = i + 1
-        while j < len(A):
-            if SumDigs(A[i]) > SumDigs(A[j]):
-                A[i], A[j] = A[j], A[i]
+        while j < n:
+            if sum_digit(arr[i]) > sum_digit(arr[j]):
+                arr[i], arr[j] = arr[j], arr[i]
             j += 1
 
         i += 1
 
-    return A
+    return arr
 
 
-A = [randint(1, 10000) for x in range(30)]
+arr = [random.randint(1, 100) for x in range(100)]
 
-print("before:", A)
-print("after: ", Sort(A))
+print("несортированный:", arr)
+print("сортированный: ", sort(arr))

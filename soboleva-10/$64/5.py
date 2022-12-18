@@ -1,28 +1,29 @@
 """
-      Напишите программу, которая сортирует массив по возрастанию первой цифры числа.
+Соболева ПКС-1
+Напишите программу, которая сортирует массив по возрастанию первой цифры числа.
 """
 
 
-from random import randint
+import random
 
 
-def Sort(A):
+def sort(arr):
     i = 0
-    while i < len(A) - 1:
+    while i < len(arr) - 1:
         j = i + 1
-        while j < len(A):
-            if A[i] // (10 ** (len(str(A[i])) - 1)) > A[j] // (
-                10 ** (len(str(A[j])) - 1)
+        while j < len(arr):
+            if arr[i] // (10 ** (len(str(arr[i])) - 1)) > arr[j] // (
+                10 ** (len(str(arr[j])) - 1)
             ):
-                A[i], A[j] = A[j], A[i]
+                arr[i], arr[j] = arr[j], arr[i]
             j += 1
 
         i += 1
 
-    return A
+    return arr
 
 
-A = [randint(1, 10000) for x in range(30)]
+arr = [random.randint(1, 1000) for x in range(100)]
 
-print("before:", A)
-print("after: ", Sort(A))
+print("несортированный:", arr)
+print("сортированный: ", sort(arr))
